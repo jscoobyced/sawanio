@@ -3,7 +3,7 @@ import Link from "next/link";
 const Menu = () => {
   return (
     <nav className="flex justify-center">
-      <ul>
+      <ul data-id='menu-top'>
         <li>
           <Link href="/">Home</Link>
         </li>

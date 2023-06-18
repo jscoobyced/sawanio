@@ -4,9 +4,10 @@ describe('Navigation', () => {
     // Start from the index page
     cy.visit('http://localhost:3000')
 
-    // Find a link with an href attribute containing "about" and click it
-    cy.get('div').should('exist')
-
+    cy.get('nav').should('exist')
+    cy.get('main').should('exist')
+    cy.get('footer').should('exist')
+    cy.get('footer').should('contain.text', 'Sawan.io')
   })
 })
 
