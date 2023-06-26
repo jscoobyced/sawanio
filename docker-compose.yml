@@ -29,8 +29,10 @@ services:
     environment:
       - CYPRESS_VIDEO=false
       - CYPRESS_SCREENSHOT_ON_RUN_FAILURE=false
-      - TEST_TYPE=component:headless
+      - DISPLAY
+      - TEST_TYPE=component
     volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
       - $PWD/cypress:/app/cypress:ro
       - $PWD/app:/app/app:ro
       - $PWD/public:/app/public:ro

@@ -1,6 +1,7 @@
 .PHONY: stop setup test e2e dev
 
 setup: stop
+	rm -Rf .next cache node_modules
 	docker-compose up setup
 
 stop:
@@ -8,7 +9,7 @@ stop:
 
 test:
 	xhost +local:*
-	docker-compose up cypress-components
+	docker-compose up cypress-components -d
 
 e2e:
 	xhost +local:*
