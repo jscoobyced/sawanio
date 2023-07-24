@@ -1,13 +1,19 @@
+import check8Ball from "./pom/8ball.cy"
+import checkPageMandatoryElements from "./pom/main.cy"
+
 // Cypress E2E Test
 describe('Navigation', () => {
   it('should navigate to the home page', () => {
     // Start from the index page
     cy.visit('http://localhost:3000')
+    checkPageMandatoryElements()
+  })
 
-    cy.get('nav').should('exist')
-    cy.get('main').should('exist')
-    cy.get('footer').should('exist')
-    cy.get('footer').should('contain.text', 'Sawan.io')
+  it('should navigate to the 8ball page', () => {
+    // Start from the index page
+    cy.visit('http://localhost:3000/8ball')
+    checkPageMandatoryElements()
+    check8Ball()
   })
 })
 
