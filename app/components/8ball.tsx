@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import '../../styles/8ball.css'
 
-const Page = () => {
+const Magic8Ball = () => {
   const [shakeClass, setShakeClass] = useState('')
   const [answer, setAnswer] = useState('')
   const answers = [
@@ -32,7 +32,7 @@ const Page = () => {
     "I'm afraid not",
     "That's a no",
     'Negative',
-    'Not at this time'
+    'Not at this time',
   ]
 
   const shake = () => {
@@ -47,23 +47,28 @@ const Page = () => {
 
   return (
     <>
-      <Image
-        alt="8 ball fortune teller"
-        className={`mx-auto pt-20 ${shakeClass}`}
-        data-id="8ball-image"
-        src={'/images/8ball.gif'}
-        width={450}
-        height={450}
-        onClick={shake}
-      />
-      <span
-        data-id="fortune-answer"
-        className="absolute top-1/3 xs:top-1/4 sm:top-ball-1/5 left-1/2 -translate-x-1/2 w-28 font-bold text-xl text-center text-tertiary-color"
-      >
-        {answer}
-      </span>
+      <h1 className="w-1/2 mx-auto text-center text-2xl sm:text-5xl font-bold">
+        Tap on the magic 8 ball
+      </h1>
+      <div className="flex mx-auto pt-10 w-4/5">
+        <Image
+          alt="8 ball fortune teller"
+          className={`mx-auto pt-20 ${shakeClass}`}
+          data-id="8ball-image"
+          src={'/images/8ball.gif'}
+          width={450}
+          height={450}
+          onClick={shake}
+        />
+        <span
+          data-id="fortune-answer"
+          className="absolute top-1/2 xs:top-1/3 left-1/2 -translate-x-1/2 w-28 font-bold text-xl text-center text-secondary-color"
+        >
+          {answer}
+        </span>
+      </div>
     </>
   )
 }
 
-export default Page
+export default Magic8Ball

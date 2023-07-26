@@ -1,38 +1,21 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 const Menu = () => {
   return (
     <nav className="flex justify-center">
-      <ul data-id='menu-top'>
+      <ul data-id="menu-top" className="p-0 m-0 list-none relative">
         <li>
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/">Fortune</Link>
-          <ul>
-            <li>
-              <Link href="/fortune">4 cards fortune</Link>
-            </li>
-            <li>
-              <Link href="/question">1 card fortune</Link>
-            </li>
-            <li>
-              <Link href="/8ball">Magic 8 Ball</Link>
-            </li>
-          </ul>
+          <Link href="/fortune">Fortune</Link>
         </li>
-        <li><Link href="/">About</Link>
-        <ul>
-            <li>
-              <Link href="/faq">FAQ</Link>
-            </li>
-            <li>
-              <Link href="/about">About</Link>
-            </li>
-          </ul></li>
+        <li>
+          <Link href="/info">Info</Link>
+        </li>
       </ul>
     </nav>
-  );
-};
+  )
+}
 
-export default Menu;
+export default Menu

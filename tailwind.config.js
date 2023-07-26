@@ -8,22 +8,15 @@ module.exports = {
         sm: '640px',
         md: '820px',
       },
-        colors: {
+      colors: {
         primary: {
-          bg: 'rgb(17, 17, 17)',
-          color: 'rgb(115, 115, 115)',
-        },
-        secondary: {
-          bg: 'rgb(23, 23, 23)',
+          bg: 'rgb(36, 37, 41)',
           color: 'rgb(255, 255, 255)',
         },
-        tertiary: {
-          color: 'rgb(51, 65, 85)',
-          bg: 'rgb(203, 213, 225)',
+        secondary: {
+          bg: 'rgb(255, 255, 255)',
+          color: 'rgb(36, 37, 41)',
         },
-      },
-      inset: {
-        'ball-1/5': '20%',
       },
     },
     fontFamily: {

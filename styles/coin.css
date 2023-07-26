@@ -1,0 +1,88 @@
+:root {
+  --face: #be9d66;
+  --lowlight: #111;
+  --side: #896c3b;
+  --side-dark: #120e08;
+  --coin-size: 7rem;
+  --coin-face: url('/images/coin-face.png');
+  --coin-head: url('/images/coin-head.png');
+  --coin-tail: url('/images/coin-tail.png');
+  --coin-speed: 250ms;
+}
+
+.coin {
+  height: var(--coin-size);
+  width: var(--coin-size);
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.coin::before {
+  content: '';
+  display: block;
+  position: relative;
+  height: var(--coin-size);
+  width: var(--coin-size);
+  border-radius: 50%;
+  background-color: var(--face);
+  background-image: var(--coin-face);
+  background-size: 100% 100%;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+
+.coin.flip::before {
+  animation: flip var(--coin-speed) linear infinite;
+}
+
+.coin.head::before {
+  background-image: var(--coin-head);
+}
+
+.coin.tail::before {
+  background-image: var(--coin-tail);
+}
+
+@keyframes flip {
+  0% {
+    height: var(--coin-size);
+    box-shadow: 0 0 0 var(--side-dark);
+    animation-timing-function: ease-in;
+  }
+
+  49.999% {
+    height: 0.1rem;
+    box-shadow: 0 0.05rem 0 var(--side), 0 0.1rem 0 var(--side),
+      0 0.15rem 0 var(--side), 0 0.2rem 0 var(--side), 0 0.25rem 0 var(--side),
+      0 0.3rem 0 var(--side), 0 0.35rem 0 var(--side), 0 0.4rem 0 var(--side),
+      0 0.45rem 0 var(--side), 0 0.5rem 0 var(--side), 0 0.55rem 0 var(--side),
+      0 0.6rem 0 var(--side), 0 0.65rem 0 var(--side), 0 0.7rem 0 var(--side),
+      0 0.75rem 0 var(--side);
+    transform: translateY(-0.375rem);
+    background-color: var(--lowlight);
+    animation-timing-function: linear;
+  }
+
+  50.001% {
+    height: 0.1rem;
+    box-shadow: 0 -0.05rem 0 var(--side), 0 -0.1rem 0 var(--side),
+      0 -0.15rem 0 var(--side), 0 -0.2rem 0 var(--side),
+      0 -0.25rem 0 var(--side), 0 -0.3rem 0 var(--side),
+      0 -0.35rem 0 var(--side), 0 -0.4rem 0 var(--side),
+      0 -0.45rem 0 var(--side), 0 -0.5rem 0 var(--side),
+      0 -0.55rem 0 var(--side), 0 -0.6rem 0 var(--side),
+      0 -0.65rem 0 var(--side), 0 -0.7rem 0 var(--side),
+      0 -0.75rem 0 var(--side);
+    transform: translateY(0.375rem);
+    background-color: var(--lowlight);
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    height: var(--coin-size);
+    box-shadow: 0 0 0 var(--side-dark);
+  }
+}

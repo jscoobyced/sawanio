@@ -1,0 +1,16 @@
+.box-item {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.box-item-balls {
+  background-image: url('/images/box-item-bg-balls.png');
+}
+
+.box-item-cards {
+  background-image: url('/images/box-item-bg-cards.png');
+}
+
+.box-item-coin {
+  background-image: url('/images/box-item-bg-coin.png');
+}
