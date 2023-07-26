@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import Link from 'next/link'
 import BoxItem from '../components/BoxItem'
 
 export const metadata: Metadata = {
