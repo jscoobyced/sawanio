@@ -12,7 +12,7 @@ const BoxItem = (props: {
   return (
     <Link
       href={link}
-      className={`box-item w-1/3 mx-5 text-center ${backgroundColor} ${backgroundImage} py-5 px-10 rounded-t-md hover:rounded-t-3xl`}
+      className={`box-item w-3/4 mx-auto mb-10 md:mb-0 md:mx-5 md:w-1/3 text-center ${backgroundColor} ${backgroundImage} py-5 px-10 rounded-t-md hover:rounded-t-3xl`}
     >
       <span className="block text-secondary-color text-2xl font-bold pb-8">{title}</span>
       <span className="text-secondary-color pr-2">{description}</span>

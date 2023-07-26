@@ -13,7 +13,7 @@ const Page = () => {
       <h1 className="w-1/2 mx-auto text-center text-5xl font-bold">
         Find your fortune here
       </h1>
-      <div className="flex mx-auto pt-10 w-4/5">
+      <div className="flex flex-col md:flex-row mx-auto pt-10 w-4/5">
         <BoxItem
           link="/fortune/8ball"
           title="8 Ball"
