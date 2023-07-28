@@ -88,6 +88,11 @@ jobs:
     if: startsWith(github.ref, 'refs/tags/v')
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+
       - name: Install doctl
         uses: digitalocean/action-doctl@v2
         with:
