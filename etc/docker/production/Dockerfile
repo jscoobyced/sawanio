@@ -1,17 +1,19 @@
 FROM node:18-alpine AS base
 
 FROM base AS deps
-RUN apk add --no-cache libc6-compat
+RUN apk add --no-cache libc6-compat git
 
 WORKDIR /app
 
-COPY --link package.json yarn.lock ./
+COPY --link package.json yarn.lock .git ./
+RUN echo "GIT_TAG=$(git describe --tags --abbrev=0)" >> .env
 RUN yarn --frozen-lockfile
 
 FROM base AS builder
 WORKDIR /app
 COPY --from=deps --link /app/node_modules ./node_modules
 COPY --link  . .
+COPY --from=deps --link /app/.env ./
 RUN yarn build
 
 FROM base AS runner
@@ -24,7 +26,6 @@ RUN \
   addgroup --system --gid 1001 nodejs; \
   adduser --system --uid 1001 nextjs
 
-RUN echo "GIT_TAG=$(git describe --tags --abbrev=0)" >> .env
 COPY --from=builder --link /app/public ./public
 
 COPY --from=builder --link --chown=1001:1001 /app/.next/standalone ./
