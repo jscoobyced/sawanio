@@ -102,7 +102,7 @@ jobs:
         run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 ${{ secrets.DIGITALOCEAN_CLUSTER_NAME }}
 
       - name: Update tag version
-        run: GIT_TAG=$(git describe --tags --abbrev=0 | sed 's/v//') && sed -i 's|latest|${GIT_TAG}|' $GITHUB_WORKSPACE/etc/docker/production/deployment.yml
+        run: GIT_TAG=$(git describe --tags --abbrev=0 | sed 's/v//') && sed -i "s|latest|${GIT_TAG}|" $GITHUB_WORKSPACE/etc/docker/production/deployment.yml
 
       - name: Check tag version
         run: tail -n 20 $GITHUB_WORKSPACE/etc/docker/production/deployment.yml
