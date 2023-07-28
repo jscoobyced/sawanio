@@ -24,6 +24,7 @@ RUN \
   addgroup --system --gid 1001 nodejs; \
   adduser --system --uid 1001 nextjs
 
+RUN echo "GIT_TAG=$(git describe --tags --abbrev=0)" >> .env
 COPY --from=builder --link /app/public ./public
 
 COPY --from=builder --link --chown=1001:1001 /app/.next/standalone ./
