@@ -5,8 +5,8 @@ const check8Ball = () => {
     .click()
     .then(() => {
       cy.get('span[data-id="fortune-answer"]')
-        .invoke('text')
-        .should('not.be.empty',{ timeout: 12000 })
+        .invoke('text', { timeout: 12000 })
+        .should('not.be.empty')
     })
 }
 
