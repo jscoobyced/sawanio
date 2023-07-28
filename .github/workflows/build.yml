@@ -59,13 +59,13 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ IMAGE_NAME }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}
           tags: |
             type=semver,pattern={{version}}
             type=raw,value=latest
           labels: |
-            org.opencontainers.image.title=${{ IMAGE_TITLE }}
-            org.opencontainers.image.description=${{ IMAGE_DESCRIPTION }}
+            org.opencontainers.image.title=${{ env.IMAGE_TITLE }}
+            org.opencontainers.image.description=${{ env.IMAGE_DESCRIPTION }}
 
       -
         name: Login to Docker Hub
