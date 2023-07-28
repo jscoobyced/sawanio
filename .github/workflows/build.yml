@@ -62,6 +62,7 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME
           tags: |
             type=semver,pattern={{version}}
+            type=raw,value=latest
           labels: |
             org.opencontainers.image.title=$IMAGE_TITLE
             org.opencontainers.image.description=$IMAGE_DESCRIPTION
@@ -84,4 +85,5 @@ jobs:
           context: .
           file: etc/docker/production/Dockerfile
           push: true
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
