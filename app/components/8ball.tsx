@@ -6,6 +6,7 @@ import '../../styles/8ball.css'
 
 const Magic8Ball = () => {
   const [shakeClass, setShakeClass] = useState('')
+  const [shaking, setShaking] = useState(false)
   const [answer, setAnswer] = useState('')
   const answers = [
     'It is certain',
@@ -36,12 +37,15 @@ const Magic8Ball = () => {
   ]
 
   const shake = () => {
+    if (shaking) return
+    setShaking(true)
     setAnswer('')
     setShakeClass('image--shake')
     setTimeout(() => {
       const chosen = Math.floor(Math.random() * answers.length)
       setAnswer(answers[chosen])
       setShakeClass('')
+      setShaking(false)
     }, 2500)
   }
 

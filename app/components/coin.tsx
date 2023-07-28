@@ -5,16 +5,19 @@ import '../../styles/coin.css'
 const FlippingCoin = () => {
   const [flipClass, setFlipClass] = useState('')
   const [flipping, setFlipping] = useState(false)
+  const [result, setResult] = useState('')
 
   const flipCoin = () => {
     if (flipping) return
     setFlipping(true)
+    setResult('')
     setFlipClass('flip')
     setTimeout(() => {
-      const result = Math.floor(Math.random() * 2)
-      setFlipClass(result == 0 ? 'head' : 'tail')
+      const coinResult = Math.floor(Math.random() * 2)
+      setFlipClass(coinResult == 0 ? 'head' : 'tail')
+      setResult(coinResult == 0 ? "It' head!" : "It's tail")
       setFlipping(false)
-    }, 5000)
+    }, 3000)
   }
 
   return (
@@ -23,10 +26,11 @@ const FlippingCoin = () => {
         Flip a coin here
       </h1>
       <div
-        className="flex mx-auto pt-20 w-4/5 justify-center"
+        className="flex mx-auto pt-20 w-4/5 flex-col items-center"
         onClick={flipCoin}
       >
-        <div className={`coin ${flipClass} mx-auto w-1/5`}></div>
+        <div className={`coin ${flipClass}`}></div>
+        <span>{result}</span>
       </div>
     </>
   )
