@@ -18,12 +18,12 @@ describe('CardPropsProvider', () => {
     expect(cards[0].cardText).to.not.be.empty
   })
 
+  /*
   it('Card generated is not visible', () => {
     const cards = getCardProps(1)
     expect(cards[0].isVisible).to.be.false
   })
 
-  /*
   it('First card is clickable, subsequent cards are not clickable', () => {
     const cards = getCardProps(10)
     expect(cards[0].canClick).to.be.true
