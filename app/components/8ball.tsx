@@ -66,7 +66,7 @@ const Magic8Ball = () => {
         />
         <span
           data-id="fortune-answer"
-          className="absolute top-1/2 xs:top-1/3 left-1/2 -translate-x-1/2 w-32 font-bold text-xl sm:text-3xl text-center text-secondary-color"
+          className="absolute top-1/2 xs:top-1/4 left-1/2 -translate-x-1/2 w-32 font-bold text-xl sm:text-3xl text-center text-secondary-color"
         >
           {answer}
         </span>

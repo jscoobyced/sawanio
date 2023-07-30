@@ -12,6 +12,7 @@ const TarotBoard = () => {
     const _cardItems = cards.map((card) => {
       return (
         <CardItem
+          key={card.index}
           index={card.index}
           size={card.size}
           card={card.card}
@@ -33,7 +34,9 @@ const TarotBoard = () => {
       <h1 className="w-1/2 mx-auto text-center text-2xl sm:text-5xl font-bold">
         Read your tarot
       </h1>
-      <div className="w-1/2 mx-auto text-center pt-5">This is a single reading version. An improved version will be back soon.</div>
+      <div className="w-1/2 mx-auto text-center pt-5">
+        This is a single reading version. An improved version will be back soon.
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mx-auto pt-10 w-4/5">
         {cardItems}
       </div>
