@@ -23,7 +23,7 @@ const FlippingCoin = () => {
   return (
     <>
       <h1 className="w-1/2 mx-auto text-center text-2xl sm:text-5xl font-bold">
-        Flip a coin here
+        Flip a coin by clicking the coin
       </h1>
       <div
         className="flex mx-auto pt-20 w-4/5 flex-col items-center"

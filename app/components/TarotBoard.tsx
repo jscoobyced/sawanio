@@ -35,7 +35,7 @@ const TarotBoard = () => {
         Read your tarot
       </h1>
       <div className="w-1/2 mx-auto text-center pt-5">
-        This is a single reading version. An improved version will be back soon.
+        This is a single reading version. An improved version will be back soon. You can refresh the page for a new reading.
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mx-auto pt-10 w-4/5">
         {cardItems}

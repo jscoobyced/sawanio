@@ -14,25 +14,25 @@ const Page = () => {
       </h1>
       <div className="flex flex-col md:flex-row mx-auto pt-10 w-4/5">
         <BoxItem
+          link="/fortune/tarot"
+          title="Tarot Fortune"
+          description="Have a question about the future? Ask the cards!"
+          backgroundColor="bg-yellow-400"
+          backgroundImage="box-item-cards"
+        />
+        <BoxItem
           link="/fortune/8ball"
           title="8 Ball"
           description='Can"t decide? Ask the 8-ball all mighty decision power.'
-          backgroundColor='bg-yellow-400'
-          backgroundImage='box-item-balls'
+          backgroundColor="bg-yellow-400"
+          backgroundImage="box-item-balls"
         />
         <BoxItem
           link="/fortune/coin"
           title="Flip a coin"
           description="Need a Yes/No answer? Just flip a coin!"
-          backgroundColor='bg-yellow-400'
-          backgroundImage='box-item-coin'
-        />
-        <BoxItem
-          link="/fortune/tarot"
-          title="Tarot Fortune"
-          description="Have a question about the future? Ask the cards!"
-          backgroundColor='bg-yellow-400'
-          backgroundImage='box-item-cards'
+          backgroundColor="bg-yellow-400"
+          backgroundImage="box-item-coin"
         />
       </div>
     </>
