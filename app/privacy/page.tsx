@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const Page = () => {
   return (
-    <div className="w-2/3 mx-auto bg-black p-5">
+    <div className="w-full sm:w-2/3 mx-auto bg-black p-5">
       <h1 className="text-3xl font-bold pb-5">Privacy Policy for sawan.io</h1>
       This Privacy Statement (Privacy Statement) explains how{' '}
       <Link href="https://sawan.io">sawan.io</Link> uses personal information
