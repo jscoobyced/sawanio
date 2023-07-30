@@ -2,8 +2,9 @@ import { Metadata } from 'next'
 import BoxItem from '../components/BoxItem'
 
 export const metadata: Metadata = {
-  title: 'Fortune',
-  description: 'Find your fortune here.',
+  title: 'Fortune - Sawan.io - Fortune, myths and legends.',
+  description:
+    'This page is about fortune telling and answering the questions you have. Do you need a full tarot reading? Do you need a quick answer? Or maybe just a flip of coin?',
 }
 
 const Page = () => {

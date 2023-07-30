@@ -1,16 +1,17 @@
-import Menu from "./components/Menu"
+import Menu from './components/Menu'
 
-const RootLayout = ({children,}: {children: React.ReactNode}) => {
-  const version = process.env.GIT_TAG || "unknown"
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
+  const version = process.env.GIT_TAG || 'unknown'
+
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen h-auto bg-primary-bg text-primary-color">
         <Menu />
-        <main className="mb-auto">
-        {children}
-        </main>
-        <footer className="flex justify-center pb-2">Sawan.io &copy; 2023 IndyTheDog - {version}</footer>
-        </body>
+        <main className="mb-auto">{children}</main>
+        <footer className="flex justify-center pb-2">
+          Sawan.io &copy; 2023 IndyTheDog - {version}
+        </footer>
+      </body>
     </html>
   )
 }
