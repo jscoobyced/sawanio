@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import FlippingCoin from '../../components/coin'
+import FlippingCoin from '../../components/FlippingCoin'
 
 export const metadata: Metadata = {
   title: 'Coin flip',

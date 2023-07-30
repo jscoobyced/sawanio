@@ -1,4 +1,4 @@
-import TarotBoard from "../../components/tarot"
+import TarotBoard from "../../components/TarotBoard"
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
