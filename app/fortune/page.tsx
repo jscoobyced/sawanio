@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <>
-      <h1 className="w-1/2 mx-auto text-center text-5xl font-bold">
+      <h1 className="w-1/2 mx-auto text-center text-3xl font-bold">
         Find your fortune here
       </h1>
       <div className="flex flex-col md:flex-row mx-auto pt-10 w-4/5">

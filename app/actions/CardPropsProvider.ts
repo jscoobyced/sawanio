@@ -25,7 +25,7 @@ const getCardProps = (
   ]
   const positions = getCardPositions(numberOfCards)
   for (let i = 0; i < numberOfCards; i++) {
-    const position = positions[i]
+    const position = positions[i] - 1
     const isReversed = findIsReversed()
     const cardText = isReversed
       ? description[DESCRIPTION_POSITION_REVERSED][position]
@@ -36,7 +36,7 @@ const getCardProps = (
     const card: CardProps = {
       index: i,
       size,
-      card: String(position).padStart(2, '0'),
+      card: String(position + 1).padStart(2, '0'),
       cardText,
       cardName,
       isReversed,

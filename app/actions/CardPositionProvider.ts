@@ -4,10 +4,8 @@ import { NUMBER_OF_CARDS } from '../models/Card'
 
 const getCardPositions = (numberOfCards: number): number[] => {
   const cardPositions: number[] = []
-  const picked: number[] = []
   for (let i = 0; i < numberOfCards; i++) {
-    const position = findNextNumber(picked)
-    picked.push(position)
+    const position = findNextNumber(cardPositions)
     cardPositions.push(position)
   }
   return cardPositions

@@ -20,11 +20,12 @@ export const metadata: Metadata = {
   publisher: 'Cédric Rochefolle',
   openGraph: {
     type: 'website',
+    url: 'https://sawan.io',
     description:
       'This website is about fortune telling, myths and legends. Feel free to browse for the content and learn about the mysteries of the past.',
     siteName: 'Sawan.io',
     title: 'Home - Sawan.io',
-    images: ['https://sawan.io/images/background.webp'],
+    images: ['https://sawan.io/images/background.webp']
   },
 }
 
