@@ -60,7 +60,7 @@ const TarotBoard = () => {
       <h1 className="w-1/2 mx-auto text-center text-2xl sm:text-3xl font-bold">
         Read your tarot
       </h1>
-      <div className="w-1/4 mx-auto text-center mt-3 p-2 text-tertiary-color bg-tertiary-bg rounded-md">
+      <div className="w-1/2 lg:w-1/3 mx-auto text-center mt-3 p-2 text-tertiary-color bg-tertiary-bg rounded-md">
         Click on the cards to reveal them. When all cards are revealed, you can click any card to restart.
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mx-auto pt-3 w-4/5">
