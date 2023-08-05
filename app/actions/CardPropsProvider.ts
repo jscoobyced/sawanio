@@ -43,7 +43,7 @@ const getCardProps = (
       title: titles[i % titles.length],
       canClick,
       click: (cardIndex: number) => void cardIndex,
-      isVisible: true,
+      isVisible: false,
     }
     cards.push(card)
     canClick = false

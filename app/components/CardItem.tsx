@@ -34,7 +34,7 @@ const CardItem = (props: CardProps): JSX.Element => {
   ]
 
   const handleClick = () => {
-    if (!isVisible && canClick) {
+    if (canClick) {
       click(index)
     }
   }
@@ -43,7 +43,7 @@ const CardItem = (props: CardProps): JSX.Element => {
     <div className="flex flex-col items-center mx-2 my-2">
       {card !== '' ? (
         <>
-          <span className='pb-2'>{title}</span>
+          <span className="pb-2">{title}</span>
           <Image
             src={cards[isVisible ? 1 : 0]}
             width={size == 'full_size' ? FULL_SIZE_WIDTH : MID_SIZE_WIDTH}
@@ -53,7 +53,7 @@ const CardItem = (props: CardProps): JSX.Element => {
             onClick={handleClick}
             className={`${isReversed ? 'rotate-180 pt-2' : 'pb-2'} ${
               size == 'full_size' ? 'min-w-card-w-full' : 'min-w-card-w-mid'
-            }`}
+            } ${canClick ? 'cursor-pointer' : ''}`}
           />
           {isVisible ? (
             <>

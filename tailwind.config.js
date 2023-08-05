@@ -18,6 +18,10 @@ module.exports = {
           bg: 'rgb(255, 255, 255)',
           color: 'rgb(36, 37, 41)',
         },
+        tertiary: {
+          bg: 'rgb(152, 163, 181)',
+          color: 'rgb(36, 37, 41)',
+        },
       },
     },
     fontFamily: {

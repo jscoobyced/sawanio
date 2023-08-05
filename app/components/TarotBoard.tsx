@@ -3,13 +3,39 @@
 import { useEffect, useState } from 'react'
 import getCardProps from '../actions/CardPropsProvider'
 import CardItem from './CardItem'
+import { CardProps } from '../models/Card'
 
 const TarotBoard = () => {
   const [cardItems, setCardItems] = useState([] as JSX.Element[])
 
+  const clickCard = (cardIndex: number) => {
+    const lastVisibleIndex = cardProps.findLast((cardProp) => {
+      return cardProp.isVisible
+    })?.index
+    const _cardProps: CardProps[] = []
+    if (lastVisibleIndex === cardProps.length - 1) {
+      getCardProps(4).forEach((cardProp) => {
+        _cardProps.push(cardProp)
+      })
+    } else {
+      cardProps.forEach((cardProp, index) => {
+        const card: CardProps = { ...cardProp }
+        if (index <= cardIndex) {
+          card.isVisible = true
+        }
+        card.canClick =
+          cardIndex === cardProps.length - 1 ||
+          (index === cardIndex + 1 && index < cardProps.length)
+        _cardProps.push(card)
+      })
+    }
+    setCardProps(_cardProps)
+  }
+
+  const [cardProps, setCardProps] = useState(getCardProps(4))
+
   useEffect(() => {
-    const cards = getCardProps(4)
-    const _cardItems = cards.map((card) => {
+    const _cardItems = cardProps.map((card) => {
       return (
         <CardItem
           key={card.index}
@@ -21,21 +47,21 @@ const TarotBoard = () => {
           isReversed={card.isReversed}
           title={card.title}
           canClick={card.canClick}
-          click={card.click}
+          click={() => clickCard(card.index)}
           isVisible={card.isVisible}
         />
       )
     })
     setCardItems(_cardItems)
-  }, [])
+  }, [cardProps])
 
   return (
     <>
       <h1 className="w-1/2 mx-auto text-center text-2xl sm:text-3xl font-bold">
         Read your tarot
       </h1>
-      <div className="w-1/2 mx-auto text-center pt-3">
-        This is a single reading version. An improved version will be back soon. You can refresh the page for a new reading.
+      <div className="w-1/4 mx-auto text-center mt-3 p-2 text-tertiary-color bg-tertiary-bg rounded-md">
+        Click on the cards to reveal them. When all cards are revealed, you can click any card to restart.
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mx-auto pt-3 w-4/5">
         {cardItems}
