@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: 'Fortune - Sawan.io - Fortune, myths and legends.',
   description:
     'This page is about fortune telling and answering the questions you have. Do you need a full tarot reading? Do you need a quick answer? Or maybe just a flip of coin?',
+  openGraph: {
+    type: 'website',
+    url: 'https://sawan.io/fortune',
+    description:
+      'This page is about fortune telling and answering the questions you have. Do you need a full tarot reading? Do you need a quick answer? Or maybe just a flip of coin?',
+    siteName: 'Sawan.io',
+    title: 'Fortune - Sawan.io',
+    images: ['https://sawan.io/images/background.webp'],
+  },
 }
 
 const Page = () => {
