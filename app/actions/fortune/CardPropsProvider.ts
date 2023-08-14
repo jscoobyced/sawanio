@@ -1,6 +1,6 @@
 'use client'
 
-import { CardProps, CardSize } from '../models/Card'
+import { CardProps, CardSize } from '../../models/Card'
 import getCardPositions from './CardPositionProvider'
 import description from './descriptions.json'
 import names from './names.json'
