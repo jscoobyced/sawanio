@@ -1,5 +1,5 @@
 import { NUMBER_OF_CARDS } from '../models/Card'
-import getCardPositions from './CardPositionProvider'
+import getCardPositions from './fortune/CardPositionProvider'
 
 describe('CardPositionProvider', () => {
   it('Can generate 0 positions', () => {

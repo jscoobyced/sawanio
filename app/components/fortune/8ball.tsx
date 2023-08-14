@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import '../../styles/8ball.css'
+import '../../../styles/8ball.css'
 
 const Magic8Ball = () => {
   const [shakeClass, setShakeClass] = useState('')

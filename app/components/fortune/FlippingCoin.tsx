@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import '../../styles/coin.css'
+import '../../../styles/coin.css'
 
 const FlippingCoin = () => {
   const [flipClass, setFlipClass] = useState('')

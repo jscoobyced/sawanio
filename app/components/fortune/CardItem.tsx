@@ -7,7 +7,7 @@ import {
   FULL_SIZE_WIDTH,
   MID_SIZE_HEIGHT,
   MID_SIZE_WIDTH,
-} from '../models/Card'
+} from '../../models/Card'
 
 const CardItem = (props: CardProps): JSX.Element => {
   const {

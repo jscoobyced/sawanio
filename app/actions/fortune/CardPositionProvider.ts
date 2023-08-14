@@ -1,6 +1,6 @@
 'use client'
 
-import { NUMBER_OF_CARDS } from '../models/Card'
+import { NUMBER_OF_CARDS } from '../../models/Card'
 
 const getCardPositions = (numberOfCards: number): number[] => {
   const cardPositions: number[] = []

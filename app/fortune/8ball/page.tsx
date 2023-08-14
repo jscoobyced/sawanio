@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import Magic8Ball from '../../components/8ball'
+import Magic8Ball from '../../components/fortune/8ball'
 
 export const metadata: Metadata = {
   title: 'Magic 8 ball',

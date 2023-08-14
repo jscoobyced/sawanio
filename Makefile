@@ -18,6 +18,10 @@ e2e:
 	xhost +local:* >/dev/null
 	TEST_TYPE=e2e docker-compose up -d cypress
 
+ci-tests:
+	TEST_TYPE=component:headless docker-compose up cypress
+	TEST_TYPE=e2e:headless docker-compose up cypress
+
 dev:
 	rm -Rf .next/cache
 	TEST_TYPE="none" docker-compose up -d dev

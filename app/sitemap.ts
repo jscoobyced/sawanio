@@ -26,5 +26,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: 'https://sawan.io/fortune/coin',
       lastModified: new Date(),
     },
+    {
+      url: 'https://sawan.io/privacy',
+      lastModified: new Date(),
+    },
+    {
+      url: 'https://sawan.io/tos',
+      lastModified: new Date(),
+    },
   ]
 }

@@ -7,7 +7,7 @@
   --coin-face: url('/images/coin-face.png');
   --coin-head: url('/images/coin-head.png');
   --coin-tail: url('/images/coin-tail.png');
-  --coin-speed: 250ms;
+  --coin-speed: 200ms;
 }
 
 .coin {
