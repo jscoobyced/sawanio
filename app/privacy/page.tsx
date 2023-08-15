@@ -1,4 +1,23 @@
 import Link from 'next/link'
+import { Metadata } from 'next'
+import meta from '../meta.json'
+
+const title = `Privacy Policy - ${meta.siteName}`
+const description =
+  'This page is our Privacy Policy. Please refer to the information in this page for any details regarding how this website protects your information.'
+
+export const metadata: Metadata = {
+  title,
+  description,
+  openGraph: {
+    type: 'website',
+    url: 'https://sawan.io/privacy',
+    description,
+    siteName: meta.siteName,
+    title,
+    images: [meta.logo],
+  },
+}
 
 const Page = () => {
   return (
@@ -85,19 +104,20 @@ const Page = () => {
         Our Policy Concerning Cookies
       </h2>
       To serve you faster and with better quality,{' '}
-      <Link href="https://sawan.io">sawan.io</Link> uses &#34;cookies&#34; technology on
-      our Site. Cookies are small bits of code, usually stored on a user&#39;s
-      computer hard drive, which enable a web site to &#34;personalize&#34; itself for
-      each user by remembering information about the user&#39;s visit to the web
-      site. Cookies can store a variety of information, including IP addresses,
-      navigational data, server information, data transfer times, user
-      preferences, and e-mail addresses and passwords needed to access the Site.
-      The &#34;Help&#34; section of the toolbar on most Internet browsers will tell you
-      how to prevent your browser from accepting new cookies or how to configure
-      your browser to reject cookies altogether. If you disable cookies, you
-      might not be able to access important functions or features of this Site
-      and your use of the Site may be limited. The cookies used on this Site are
-      associated with a user&#39;s Personal Information.
+      <Link href="https://sawan.io">sawan.io</Link> uses &#34;cookies&#34;
+      technology on our Site. Cookies are small bits of code, usually stored on
+      a user&#39;s computer hard drive, which enable a web site to
+      &#34;personalize&#34; itself for each user by remembering information
+      about the user&#39;s visit to the web site. Cookies can store a variety of
+      information, including IP addresses, navigational data, server
+      information, data transfer times, user preferences, and e-mail addresses
+      and passwords needed to access the Site. The &#34;Help&#34; section of the
+      toolbar on most Internet browsers will tell you how to prevent your
+      browser from accepting new cookies or how to configure your browser to
+      reject cookies altogether. If you disable cookies, you might not be able
+      to access important functions or features of this Site and your use of the
+      Site may be limited. The cookies used on this Site are associated with a
+      user&#39;s Personal Information.
       <h2 className="text-2xl font-bold pt-5 pb-2">Links to Other Websites</h2>
       <Link href="https://sawan.io">sawan.io</Link> contains links to other
       websites, <Link href="https://sawan.io">sawan.io</Link>
@@ -117,7 +137,9 @@ const Page = () => {
       posted on the site, to give you notice. Any customer who does not agree to
       the altered privacy statement has the option to sign-out or terminate user
       account.
-      <h2 className="text-2xl font-bold pt-5 pb-2">Privacy Contact Information</h2>
+      <h2 className="text-2xl font-bold pt-5 pb-2">
+        Privacy Contact Information
+      </h2>
       If you have any questions, concern, or comments about our privacy
       statement you may contact us.
     </div>

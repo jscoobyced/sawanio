@@ -1,4 +1,23 @@
 import Link from 'next/link'
+import { Metadata } from 'next'
+import meta from '../meta.json'
+
+const title = `Terms Of Service - ${meta.siteName}`
+const description =
+  'This page is our Terms Of Service. Please refer to the information in this page for any details regarding how to use this website.'
+
+export const metadata: Metadata = {
+  title,
+  description,
+  openGraph: {
+    type: 'website',
+    url: 'https://sawan.io/privacy',
+    description,
+    siteName: meta.siteName,
+    title,
+    images: [meta.logo],
+  },
+}
 
 const Page = () => {
   return (

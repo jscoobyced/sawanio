@@ -12,10 +12,10 @@ module.exports = {
       colors: {
         primary: {
           bg: 'rgb(36, 37, 41)',
-          color: 'rgb(255, 255, 255)',
+          color: 'rgb(255, 195, 77)',
         },
         secondary: {
-          bg: 'rgb(255, 255, 255)',
+          bg: 'rgb(255, 195, 77)',
           color: 'rgb(36, 37, 41)',
         },
         tertiary: {

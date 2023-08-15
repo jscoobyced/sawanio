@@ -3,11 +3,15 @@ import '../styles/globals.css'
 import '../styles/montserrat.css'
 import '../styles/menu.css'
 import RootLayout from './base_layout'
+import meta from './meta.json'
+
+const title = `Home - ${meta.siteName} - Fortune, myths and legends.`
+const description =
+  'This website is about fortune telling, myths and legends. Feel free to browse for the content and learn about the mysteries of the past.'
 
 export const metadata: Metadata = {
-  title: 'Home - Sawan.io - Fortune, myths and legends.',
-  description:
-    'This website is about fortune telling, myths and legends. Feel free to browse for the content and learn about the mysteries of the past.',
+  title,
+  description,
   authors: [{ url: 'https://narok.io' }],
   keywords: [
     'fortune teller',
@@ -21,11 +25,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://sawan.io',
-    description:
-      'This website is about fortune telling, myths and legends. Feel free to browse for the content and learn about the mysteries of the past.',
-    siteName: 'Sawan.io',
-    title: 'Home - Sawan.io',
-    images: ['https://sawan.io/images/background.webp']
+    description,
+    siteName: meta.siteName,
+    title,
+    images: [meta.logo],
   },
 }
 
