@@ -11,6 +11,9 @@ const Menu = () => {
           <Link href="/fortune">Fortune</Link>
         </li>
         <li>
+          <Link href="/legends">Legends</Link>
+        </li>
+        <li>
           <Link href="/info">Info</Link>
         </li>
       </ul>

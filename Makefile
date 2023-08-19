@@ -19,6 +19,7 @@ e2e:
 	TEST_TYPE=e2e docker-compose up -d cypress
 
 ci-tests:
+	xhost +local:* >/dev/null
 	TEST_TYPE=component:headless docker-compose up cypress
 	TEST_TYPE=e2e:headless docker-compose up cypress
 

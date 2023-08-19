@@ -5,7 +5,7 @@ describe('<Menu />', () => {
     cy.mount(<Menu />)
 
     cy.get('nav').find('ul').should('have.length', 1)
-    cy.get('ul[data-id="menu-top"]').find('li').should('have.length', 3)
+    cy.get('ul[data-id="menu-top"]').find('li').should('have.length', 4)
 
   })
 })
