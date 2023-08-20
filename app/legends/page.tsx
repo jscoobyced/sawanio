@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 const Page = () => {
   const boxItems = [
     <BoxItem
+      key="box-item-legends-ghosts"
       link="/legends"
       title="Ghosts"
       description="Ghosts around the world. Coming soon!"
@@ -38,6 +39,7 @@ const Page = () => {
       backgroundImage="box-item-balls"
     />,
     <BoxItem
+      key="box-item-legends-witches"
       link="/legends"
       title="Witches"
       description="Witches around the world. Coming soon!"
@@ -45,6 +47,7 @@ const Page = () => {
       backgroundImage="box-item-cards"
     />,
     <BoxItem
+      key="box-item-legends-dragons"
       link="/legends"
       title="Dragons"
       description="Dragons around the world. Coming soon!"
@@ -52,6 +55,7 @@ const Page = () => {
       backgroundImage="box-item-balls"
     />,
     <BoxItem
+      key="box-item-legends-demons"
       link="/legends"
       title="Demons"
       description="Demons around the world. Coming soon!"

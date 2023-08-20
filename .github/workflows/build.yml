@@ -33,6 +33,9 @@ jobs:
       - name: Building app
         run: yarn --frozen-lockfile
 
+      - name: Check for Lint errors
+        run: yarn lint
+
       - name: Components testing
         run: yarn component:headless
 

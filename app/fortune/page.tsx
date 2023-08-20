@@ -23,6 +23,7 @@ export const metadata: Metadata = {
 const Page = () => {
   const boxItems = [
     <BoxItem
+      key="box-item-fortune-tarot"
       link="/fortune/tarot"
       title="Tarot Fortune"
       description="Have a question about the future? Ask the cards!"
@@ -30,6 +31,7 @@ const Page = () => {
       backgroundImage="box-item-cards"
     />,
     <BoxItem
+      key="box-item-fortune-8ball"
       link="/fortune/8ball"
       title="8 Ball"
       description='Can"t decide? Ask the 8-ball all mighty decision power.'
@@ -37,6 +39,7 @@ const Page = () => {
       backgroundImage="box-item-balls"
     />,
     <BoxItem
+      key="box-item-fortune-coin"
       link="/fortune/coin"
       title="Flip a coin"
       description="Need a Yes/No answer? Just flip a coin!"
