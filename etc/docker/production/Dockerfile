@@ -5,7 +5,7 @@ RUN apk add --no-cache libc6-compat git
 
 WORKDIR /app
 
-COPY --link src/website/package.json src/website/yarn.lock src/website/.git ./
+COPY --link src/website/package.json src/website/yarn.lock .git ./
 RUN echo "GIT_TAG=$(git describe --tags --abbrev=0)" >> .env
 RUN yarn --frozen-lockfile
 
