@@ -31,13 +31,13 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Building app
-        run: yarn --frozen-lockfile
+        run: yarn --cwd src/website --frozen-lockfile
 
       - name: Components testing
-        run: yarn component:headless
+        run: yarn --cwd src/website component:headless
 
       - name: E2E testing
-        run: yarn e2e:headless
+        run: yarn --cwd src/website e2e:headless
 
   lint:
     name: Check for linting errors
@@ -57,10 +57,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Building app
-        run: yarn --frozen-lockfile
+        run: yarn --cwd src/website --frozen-lockfile
 
       - name: Check for Lint errors
-        run: yarn lint
+        run: yarn --cwd src/website lint
 
   build:
     name: Build image
