@@ -8,8 +8,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y libgtk2.0-0 \
     libasound2 libxtst6 xauth xvfb procps
 
 WORKDIR /app
-COPY cypress.config.ts postcss.config.js tailwind.config.js ./
-COPY package.json tsconfig.json yarn.lock ./
+COPY src/website/cypress.config.ts src/website/postcss.config.js src/website/tailwind.config.js ./
+COPY src/website/package.json src/website/tsconfig.json src/website/yarn.lock ./
 RUN yarn
 RUN yarn cypress install
 RUN yarn next telemetry disable

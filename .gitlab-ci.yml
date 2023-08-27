@@ -30,7 +30,7 @@ stages:
     script:
         - echo "This stage checks the development environment is stable."
         - docker build -t ${DOCKER_SETUP_TAG} -f etc/docker/node/Dockerfile .
-        - docker run --user "1000:1000" --volume $PWD:/app --workdir "/app" --entrypoint "/home/node/entrypoint-setup.sh" ${DOCKER_SETUP_TAG}
+        - docker run --user "1000:1000" --volume $PWD/src/website:/app --workdir "/app" --entrypoint "/home/node/entrypoint-setup.sh" ${DOCKER_SETUP_TAG}
         - docker push ${DOCKER_SETUP_TAG}
 
 "Build Cypress":
@@ -50,13 +50,13 @@ stages:
     extends: .tests
     script:
         - echo "This stage runs the components tests."
-        - docker run --rm --volume $PWD:/app --workdir "/app" --env CYPRESS_VIDEO=false --env CYPRESS_SCREENSHOT_ON_RUN_FAILURE=false --env TEST_TYPE="component:headless" ${DOCKER_CYPRESS_TAG}
+        - docker run --rm --volume $PWD/src/website:/app --workdir "/app" --env CYPRESS_VIDEO=false --env CYPRESS_SCREENSHOT_ON_RUN_FAILURE=false --env TEST_TYPE="component:headless" ${DOCKER_CYPRESS_TAG}
 
 "End-to-end tests":
     extends: .tests
     script:
         - echo "This stage runs the E2E tests."
-        - docker run --rm --volume $PWD:/app --workdir "/app" --env CYPRESS_VIDEO=false --env CYPRESS_SCREENSHOT_ON_RUN_FAILURE=false --env TEST_TYPE="e2e:headless" ${DOCKER_CYPRESS_TAG}
+        - docker run --rm --volume $PWD/src/website:/app --workdir "/app" --env CYPRESS_VIDEO=false --env CYPRESS_SCREENSHOT_ON_RUN_FAILURE=false --env TEST_TYPE="e2e:headless" ${DOCKER_CYPRESS_TAG}
 
 "Deploy To Vercel":
     stage: Deploy
@@ -64,4 +64,4 @@ stages:
         - Production
     script:
         - echo "This stage deploys the application to Vercel."
-        - docker run --rm --user "1000:1000" --volume $PWD:/app --env VERCEL_TOKEN=${VERCEL_TOKEN} --env VERCEL_PROJECT_ID=${VERCEL_PROJECT_ID} --env VERCEL_ORG_ID=${VERCEL_ORG_ID} --workdir "/app" --entrypoint "/home/node/entrypoint-deploy.sh" ${DOCKER_SETUP_TAG}
+        - docker run --rm --user "1000:1000" --volume $PWD/src/website:/app --env VERCEL_TOKEN=${VERCEL_TOKEN} --env VERCEL_PROJECT_ID=${VERCEL_PROJECT_ID} --env VERCEL_ORG_ID=${VERCEL_ORG_ID} --workdir "/app" --entrypoint "/home/node/entrypoint-deploy.sh" ${DOCKER_SETUP_TAG}

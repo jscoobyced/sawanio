@@ -2,8 +2,8 @@
 .SILENT: stop setup test e2e dev
 
 setup: stop
-	rm -Rf .next cache node_modules .vercel yarn.lock
-	touch .env .env.local yarn.lock
+	rm -Rf ./src/website/.next ./src/website/cache ./src/website/node_modules ./src/website/.vercel ./src/website/yarn.lock
+	touch ./src/website/.env ./src/website/.env.local ./src/website/yarn.lock
 	TEST_TYPE="none" docker-compose up setup
 	TEST_TYPE="none" docker-compose down
 

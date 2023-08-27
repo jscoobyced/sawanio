@@ -15,18 +15,18 @@ services:
       - TEST_TYPE=$TEST_TYPE
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
-      - $PWD/cypress:/app/cypress
-      - $PWD/.env.local:/app/.env.local
-      - $PWD/.env:/app/.env
-      - $PWD/app:/app/app:ro
-      - $PWD/public:/app/public:ro
-      - $PWD/styles:/app/styles:ro
-      - $PWD/package.json:/app/package.json
-      - $PWD/tsconfig.json:/app/tsconfig.json
-      - $PWD/next.config.js:/app/next.config.js
-      - $PWD/tailwind.config.js:/app/tailwind.config.js
-      - $PWD/postcss.config.js:/app/postcss.config.js
-      - $PWD/yarn.lock:/app/yarn.lock
+      - $PWD/src/website/cypress:/app/cypress
+      - $PWD/src/website/.env.local:/app/.env.local
+      - $PWD/src/website/.env:/app/.env
+      - $PWD/src/website/app:/app/app:ro
+      - $PWD/src/website/public:/app/public:ro
+      - $PWD/src/website/styles:/app/styles:ro
+      - $PWD/src/website/package.json:/app/package.json
+      - $PWD/src/website/tsconfig.json:/app/tsconfig.json
+      - $PWD/src/website/next.config.js:/app/next.config.js
+      - $PWD/src/website/tailwind.config.js:/app/tailwind.config.js
+      - $PWD/src/website/postcss.config.js:/app/postcss.config.js
+      - $PWD/src/website/yarn.lock:/app/yarn.lock
 
   # Run the next JS application in dev mode
   dev:
@@ -40,19 +40,19 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - $PWD/node_modules:/app/node_modules
-      - $PWD/.next:/app/.next
-      - $PWD/app:/app/app:ro
-      - $PWD/public:/app/public:ro
-      - $PWD/.env.local:/app/.env.local
-      - $PWD/.env:/app/.env
-      - $PWD/styles:/app/styles:ro
-      - $PWD/package.json:/app/package.json
-      - $PWD/tsconfig.json:/app/tsconfig.json
-      - $PWD/next.config.js:/app/next.config.js
-      - $PWD/tailwind.config.js:/app/tailwind.config.js
-      - $PWD/postcss.config.js:/app/postcss.config.js
-      - $PWD/yarn.lock:/app/yarn.lock
+      - $PWD/src/website/node_modules:/app/node_modules
+      - $PWD/src/website/.next:/app/.next
+      - $PWD/src/website/app:/app/app:ro
+      - $PWD/src/website/public:/app/public:ro
+      - $PWD/src/website/.env.local:/app/.env.local
+      - $PWD/src/website/.env:/app/.env
+      - $PWD/src/website/styles:/app/styles:ro
+      - $PWD/src/website/package.json:/app/package.json
+      - $PWD/src/website/tsconfig.json:/app/tsconfig.json
+      - $PWD/src/website/next.config.js:/app/next.config.js
+      - $PWD/src/website/tailwind.config.js:/app/tailwind.config.js
+      - $PWD/src/website/postcss.config.js:/app/postcss.config.js
+      - $PWD/src/website/yarn.lock:/app/yarn.lock
   # One time setup
   setup:
     build:
@@ -61,7 +61,7 @@ services:
     user: 1000:1000
     working_dir: /app
     volumes:
-      - $PWD:/app
+      - $PWD/src/website:/app
     entrypoint: /home/node/entrypoint-setup.sh
 
 networks:
