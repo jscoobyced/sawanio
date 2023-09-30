@@ -5,20 +5,22 @@ const BoxItem = (props: {
   link: string
   title: string
   description: string
+  foregroundColor?: string
+  arrowColor?: string
   backgroundColor: string
   backgroundImage?: string
 }) => {
-  const { link, title, description, backgroundColor, backgroundImage } = props
+  const { link, title, description, backgroundColor, backgroundImage, foregroundColor, arrowColor } = props
   return (
     <Link
       href={link}
       className={`box-item mx-auto md:mx-5 text-center ${backgroundColor} ${backgroundImage} py-5 px-10 rounded-t-md hover:rounded-t-3xl`}
     >
-      <span className="block text-secondary-color text-2xl font-bold pb-8">{title}</span>
-      <span className="text-secondary-color pr-2">{description}</span>
+      <span className={`block text-secondary-color text-2xl font-bold pb-8 ${foregroundColor}`}>{title}</span>
+      <span className={`text-secondary-color pr-2 ${foregroundColor}`}>{description}</span>
       <svg
         fill="currentColor"
-        color="black"
+        color={`${arrowColor || 'black'}`}
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
         width="1em"

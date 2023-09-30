@@ -14,3 +14,11 @@
 .box-item-coin {
   background-image: url('/images/box-item-bg-coin.png');
 }
+
+.box-item-ghost {
+  background-image: url('/images/box-item-bg-ghost.png');
+}
+
+.box-item-witch {
+  background-image: url('/images/box-item-bg-witch.png');
+}

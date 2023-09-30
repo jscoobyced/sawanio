@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   keywords: [
     'fairy',
     'legends',
-    'myhts',
+    'myths',
     'fairytales',
     'monsters',
     'creatures',
@@ -35,22 +35,28 @@ const Page = () => {
       link="/legends"
       title="Ghosts"
       description="Ghosts around the world. Coming soon!"
+      foregroundColor="text-white"
+      arrowColor="white"
       backgroundColor="bg-sky-700"
-      backgroundImage="box-item-balls"
+      backgroundImage="box-item-ghost"
     />,
     <BoxItem
       key="box-item-legends-witches"
       link="/legends"
       title="Witches"
       description="Witches around the world. Coming soon!"
+      foregroundColor="text-white"
+      arrowColor="white"
       backgroundColor="bg-lime-700"
-      backgroundImage="box-item-cards"
+      backgroundImage="box-item-witch"
     />,
     <BoxItem
       key="box-item-legends-dragons"
       link="/legends"
       title="Dragons"
       description="Dragons around the world. Coming soon!"
+      foregroundColor="text-white"
+      arrowColor="white"
       backgroundColor="bg-lime-900"
       backgroundImage="box-item-balls"
     />,
@@ -59,6 +65,8 @@ const Page = () => {
       link="/legends"
       title="Demons"
       description="Demons around the world. Coming soon!"
+      foregroundColor="text-white"
+      arrowColor="white"
       backgroundColor="bg-rose-900"
       backgroundImage="box-item-balls"
     />,
