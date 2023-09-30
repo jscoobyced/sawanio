@@ -22,3 +22,11 @@
 .box-item-witch {
   background-image: url('/images/box-item-bg-witch.png');
 }
+
+.box-item-dragon {
+  background-image: url('/images/box-item-bg-dragon.png');
+}
+
+.box-item-demon {
+  background-image: url('/images/box-item-bg-demon.png');
+}

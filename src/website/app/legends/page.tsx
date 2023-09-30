@@ -58,7 +58,7 @@ const Page = () => {
       foregroundColor="text-white"
       arrowColor="white"
       backgroundColor="bg-lime-900"
-      backgroundImage="box-item-balls"
+      backgroundImage="box-item-dragon"
     />,
     <BoxItem
       key="box-item-legends-demons"
@@ -68,7 +68,7 @@ const Page = () => {
       foregroundColor="text-white"
       arrowColor="white"
       backgroundColor="bg-rose-900"
-      backgroundImage="box-item-balls"
+      backgroundImage="box-item-demon"
     />,
   ]
   return <PageItem title="Myths and legends">{boxItems}</PageItem>
