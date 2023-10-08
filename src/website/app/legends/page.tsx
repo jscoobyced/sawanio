@@ -32,7 +32,7 @@ const Page = () => {
   const boxItems = [
     <BoxItem
       key="box-item-legends-ghosts"
-      link="/legends"
+      link="/legends/ghosts"
       title="Ghosts"
       description="Ghosts around the world. Coming soon!"
       foregroundColor="text-white"
@@ -42,7 +42,7 @@ const Page = () => {
     />,
     <BoxItem
       key="box-item-legends-witches"
-      link="/legends"
+      link="/legends/witches"
       title="Witches"
       description="Witches around the world. Coming soon!"
       foregroundColor="text-white"
@@ -52,7 +52,7 @@ const Page = () => {
     />,
     <BoxItem
       key="box-item-legends-dragons"
-      link="/legends"
+      link="/legends/dragons"
       title="Dragons"
       description="Dragons around the world. Coming soon!"
       foregroundColor="text-white"
@@ -62,7 +62,7 @@ const Page = () => {
     />,
     <BoxItem
       key="box-item-legends-demons"
-      link="/legends"
+      link="/legends/demons"
       title="Demons"
       description="Demons around the world. Coming soon!"
       foregroundColor="text-white"

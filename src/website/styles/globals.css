@@ -44,6 +44,12 @@ ul {
   list-style-type: disc;
 }
 
+.circle-shape {
+  shape-outside: border-box;
+  margin: 1rem;
+  padding: 0px 10px;
+}
+
 @media screen and (max-width: 820px) {
   body {
     background-image: url('/images/background-mobile.webp');

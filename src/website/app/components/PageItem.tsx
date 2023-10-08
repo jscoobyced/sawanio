@@ -5,7 +5,7 @@ const PageItem = (props: {
 }) => {
   const { title, children, description } = props
   const childrenContent = (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 justify-center mx-auto pt-10 w-4/5">
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 justify-center mx-auto pt-10 w-4/5">
       {children}
     </div>
   )

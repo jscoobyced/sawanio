@@ -13,6 +13,7 @@ module.exports = {
         primary: {
           bg: 'rgb(36, 37, 41)',
           color: 'rgb(255, 195, 77)',
+          link: 'rgb(77, 195, 255)'
         },
         secondary: {
           bg: 'rgb(255, 195, 77)',
