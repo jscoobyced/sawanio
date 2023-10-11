@@ -10,6 +10,7 @@ const description =
   'This website is about fortune telling, myths and legends. Feel free to browse for the content and learn about the mysteries of the past.'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://sawan.io.com'),
   title,
   description,
   authors: [{ url: 'https://narok.io' }],
