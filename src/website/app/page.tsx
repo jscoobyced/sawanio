@@ -29,19 +29,25 @@ const Home = () => {
 
   const legendsArticleContent = (
     <>
-    Continue your journey with discovering creatures and legendary beings. You can read more about{' '}
+      Continue your journey with discovering creatures and legendary beings. You
+      can read more about{' '}
       <Link className="text-primary-link" href={'/legends/ghosts'}>
         ghosts
-      </Link> around the world. Also from all countries, we have a section to tell the tales of{' '}
+      </Link>{' '}
+      around the world. Also from all countries, we have a section to tell the
+      tales of{' '}
       <Link className="text-primary-link" href={'/legends/witches'}>
         witches
-      </Link>. If you are more of a{' '}
+      </Link>
+      . If you are more of a{' '}
       <Link className="text-primary-link" href={'/legends/demons'}>
         demons
-      </Link> person, we&apos;ve got you covered. And last but not least, if{' '}
+      </Link>{' '}
+      person, we&apos;ve got you covered. And last but not least, if{' '}
       <Link className="text-primary-link" href={'/legends/dragons'}>
         dragons
-      </Link> is what you are looking for, then we have them as well.
+      </Link>{' '}
+      is what you are looking for, then we have them as well.
     </>
   )
 
@@ -54,12 +60,14 @@ const Home = () => {
         <Article content={titleContent}></Article>
         <Article
           content={fortuneArticleContent}
-          title="A fortune teller preparing to tell fortune with tarot cards."
+          title="Fortune"
+          alt="A fortune teller preparing to tell fortune with tarot cards."
           image="/images/fortune-teller-small.jpg"
         ></Article>
         <Article
           content={legendsArticleContent}
-          title="A fortune teller preparing to tell fortune with tarot cards."
+          title="Legends"
+          alt="A fortune teller preparing to tell fortune with tarot cards."
           image="/images/red-dragon-small.jpg"
           right={true}
         ></Article>

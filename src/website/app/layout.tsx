@@ -10,7 +10,7 @@ const description =
   'This website is about fortune telling, myths and legends. Feel free to browse for the content and learn about the mysteries of the past.'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://sawan.io.com'),
+  metadataBase: new URL(meta.siteUrl),
   title,
   description,
   authors: [{ url: 'https://narok.io' }],
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   publisher: 'Cédric Rochefolle',
   openGraph: {
     type: 'website',
-    url: 'https://sawan.io',
+    url: meta.siteUrl,
     description,
     siteName: meta.siteName,
     title,

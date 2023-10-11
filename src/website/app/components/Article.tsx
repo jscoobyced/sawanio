@@ -4,13 +4,15 @@ const Article = (props: {
   content: JSX.Element
   image?: string
   title?: string
+  alt?: string
   right?: boolean
 }) => {
-  const { content, image, title, right } = props
+  const { content, image, title, right, alt } = props
   const float = !!right ? 'float-right' : 'float-left'
+  const titleContent = !!title ? <h2 className='py-5 text-2xl'>{title}</h2> : <></>
   const imageElement = image && (
     <Image
-      alt={`${title}`}
+      alt={`${alt}`}
       className={`${float} rounded-full circle-shape`}
       src={image}
       width={150}
@@ -19,7 +21,8 @@ const Article = (props: {
   )
   return (
     <>
-      <p className="pt-5">
+      {titleContent}
+      <p>
         {imageElement}
         {content}
       </p>

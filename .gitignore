@@ -1,5 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 **/node_modules
 **/.pnp
@@ -29,6 +27,10 @@
 
 # vercel
 **/.vercel
+
+# local certificates
+server.cert
+server.key
 
 # typescript
 **/*.tsbuildinfo
