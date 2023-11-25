@@ -1,11 +1,20 @@
-.PHONY: stop setup test e2e dev
+.PHONY: stop setup test e2e dev reset clean
 .SILENT: stop setup test e2e dev
 
-setup: stop
+clean: stop
 	rm -Rf ./src/website/.next ./src/website/cache ./src/website/node_modules ./src/website/.vercel ./src/website/yarn.lock
 	touch ./src/website/.env ./src/website/.env.local ./src/website/yarn.lock
+
+setup: clean
 	TEST_TYPE="none" docker-compose up setup
 	TEST_TYPE="none" docker-compose down
+
+reset: clean
+	cp src/website/package.json.tpl src/website/package.json
+	yarn --cwd src/website add next react react-dom sharp
+	yarn --cwd src/website add -D @types/node @types/react @types/react-dom @typescript-eslint/eslint-plugin @typescript-eslint/parser \
+		autoprefixer cypress eslint eslint-config-next eslint-config-prettier postcss start-server-and-test tailwindcss typescript
+	git add src/website
 
 stop:
 	TEST_TYPE="none" docker-compose down
