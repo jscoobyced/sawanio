@@ -1,5 +1,7 @@
 .PHONY: stop setup test e2e dev reset clean
 .SILENT: stop setup test e2e dev
+DEV_FILES = $(shell cat src/website/deps_dev.txt | tr '\n' ' ')
+RUN_FILES = $(shell cat src/website/deps_run.txt | tr '\n' ' ')
 
 clean: stop
 	rm -Rf ./src/website/.next ./src/website/cache ./src/website/node_modules ./src/website/.vercel ./src/website/yarn.lock
@@ -11,9 +13,8 @@ setup: clean
 
 reset: clean
 	cp src/website/package.json.tpl src/website/package.json
-	yarn --cwd src/website add next react react-dom sharp
-	yarn --cwd src/website add -D @types/node @types/react @types/react-dom @typescript-eslint/eslint-plugin @typescript-eslint/parser \
-		autoprefixer cypress eslint eslint-config-next eslint-config-prettier postcss start-server-and-test tailwindcss typescript
+	yarn --cwd src/website add $(RUN_FILES)
+	yarn --cwd src/website add -D $(DEV_FILES)
 	git add src/website
 
 stop:
