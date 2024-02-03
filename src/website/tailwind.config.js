@@ -11,8 +11,8 @@ module.exports = {
       },
       colors: {
         primary: {
-          bg: 'rgb(36, 37, 41)',
-          color: 'rgb(255, 195, 77)',
+          bg: 'rgb(240, 240, 240)',
+          color: 'rgb(128, 96, 8)',
           link: 'rgb(77, 195, 255)'
         },
         secondary: {

@@ -34,6 +34,17 @@ const Page = () => {
             <li>Magic 8 ball</li>
           </ol>
         </li>
+      </ul>
+      <ul>
+        <li>
+          Legends
+          <ol>
+            <li>Ghosts around the world</li>
+            <li>Witches around the world</li>
+            <li>Dragons around the world</li>
+            <li>Demons around the world</li>
+          </ol>
+        </li>
         <li>More coming soon!</li>
       </ul>
       <p>
