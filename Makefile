@@ -3,6 +3,9 @@
 DEV_FILES = $(shell cat src/website/deps_dev.txt | tr '\n' ' ')
 RUN_FILES = $(shell cat src/website/deps_run.txt | tr '\n' ' ')
 
+stop:
+	TEST_TYPE="none" docker-compose down
+
 clean: stop
 	rm -Rf ./src/website/.next ./src/website/cache ./src/website/node_modules ./src/website/.vercel ./src/website/yarn.lock
 	touch ./src/website/.env ./src/website/.env.local ./src/website/yarn.lock
@@ -16,9 +19,6 @@ reset: clean
 	yarn --cwd src/website add $(RUN_FILES)
 	yarn --cwd src/website add -D $(DEV_FILES)
 	git add src/website
-
-stop:
-	TEST_TYPE="none" docker-compose down
 
 test:
 	xhost +local:* >/dev/null
