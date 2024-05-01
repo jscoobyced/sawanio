@@ -5,7 +5,7 @@
 @typescript-eslint/parser
 autoprefixer
 cypress
-eslint
+eslint@8.57.0
 eslint-config-next
 eslint-config-prettier
 postcss
