@@ -18,6 +18,7 @@ reset: clean
 	cp src/website/package.json.tpl src/website/package.json
 	yarn --cwd src/website add $(RUN_FILES)
 	yarn --cwd src/website add -D $(DEV_FILES)
+  yarn --cwd src/website lint
 	git add src/website
 
 test:
