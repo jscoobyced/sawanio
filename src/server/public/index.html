@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <main>
+      My ID: <span id="my-peer-id"></span>
+      <br />
+      Contact ID: <input type="text" size="32" id="remote-peer-id" />
+      <button onclick="openConnection()">Connect</button>
+      <button onclick="callRemote()">Call</button>
+      <br />
+      <ul id="user-list"></ul>
+      <p>
+        <video id="my-video-id"></video>
+      </p>
+      <p>
+        <video id="remote-video-id"></video>
+      </p>
+    </main>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
