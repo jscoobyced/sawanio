@@ -38,16 +38,8 @@ dev:
 	rm -Rf .next/cache
 	TEST_TYPE="none" docker-compose up -d dev
 
-certificate:
-	rm -Rf ./src/server/certificates
-	mkdir -p ./src/server/certificates
-	openssl req -nodes -new -x509 -subj "/C=TH/ST=Bangkok/L=Bangkok/O=Sawan.io /OU=IT Department/CN=R&D" -keyout src/server/certificates/server.key -out src/server/certificates/server.cert
-
 build_prod:
 	docker build -t jscdroiddev/sawanio:latest -f etc/docker/production/Dockerfile .
 
 run_prod:
 	docker run -it --rm --name sawanio -p 3000:3000 jscdroiddev/sawanio:latest
-
-server:
-	yarn --cwd src/server dev
