@@ -1,3 +1,5 @@
+import { JSX } from 'react'
+
 const PageItem = (props: {
   title: string
   description?: string

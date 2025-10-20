@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { JSX, useEffect, useState } from 'react'
 import getCardProps from '../../actions/fortune/CardPropsProvider'
 import CardItem from './CardItem'
 import { CardProps } from '../../models/Card'

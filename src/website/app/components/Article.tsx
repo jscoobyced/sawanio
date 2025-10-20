@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { JSX } from 'react'
 
 const Article = (props: {
   content: JSX.Element
@@ -9,7 +10,11 @@ const Article = (props: {
 }) => {
   const { content, image, title, right, alt } = props
   const float = !!right ? 'float-right' : 'float-left'
-  const titleContent = !!title ? <h2 className='py-5 text-2xl'>{title}</h2> : <></>
+  const titleContent = !!title ? (
+    <h2 className="py-5 text-2xl">{title}</h2>
+  ) : (
+    <></>
+  )
   const imageElement = image && (
     <Image
       alt={`${alt}`}

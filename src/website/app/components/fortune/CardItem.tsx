@@ -8,6 +8,7 @@ import {
   MID_SIZE_HEIGHT,
   MID_SIZE_WIDTH,
 } from '../../models/Card'
+import { JSX } from 'react'
 
 const CardItem = (props: CardProps): JSX.Element => {
   const {
