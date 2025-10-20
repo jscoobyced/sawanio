@@ -7,13 +7,13 @@ module.exports = {
         xs: '389px',
         sm: '640px',
         md: '820px',
-        lg: '1000px'
+        lg: '1000px',
       },
       colors: {
         primary: {
           bg: 'rgb(240, 240, 240)',
           color: 'rgb(128, 96, 8)',
-          link: 'rgb(77, 195, 255)'
+          link: 'rgb(77, 195, 255)',
         },
         secondary: {
           bg: 'rgb(255, 195, 77)',
@@ -22,6 +22,15 @@ module.exports = {
         tertiary: {
           bg: 'rgb(152, 163, 181)',
           color: 'rgb(36, 37, 41)',
+        },
+        physical: {
+          color: 'rgb(255, 107, 107)',
+        },
+        intellectual: {
+          color: 'rgb(69, 183, 209)',
+        },
+        emotional: {
+          color: 'rgb(78, 205, 196)',
         },
       },
     },
